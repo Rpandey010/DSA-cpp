@@ -8,11 +8,11 @@ int main(){
     cin>>n;
 
     float ans =0;  //facing issue here with int so used float!!!
-    int i =0;
+    int i =0;      
 
     while(n!=0){
 
-        int bit = n & 1;
+        int bit = n & 1;      // //bit nikalo XYZ, if Z is 1 and opeartion will give 1 
 
         ans= (bit * pow(10, i)) + ans;
         n = n>>1;
