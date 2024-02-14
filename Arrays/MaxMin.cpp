@@ -36,7 +36,10 @@ int getMin(int num[], int n){
 int main(){
 
     int size;
+    cout<<"Enter the size of an array: ";
     cin>>size;
+
+    cout<<"Enter the element in array"<<endl;
 
     int num[10];  //i am saying that the size/capacity of array is 10
     //taking input in array
