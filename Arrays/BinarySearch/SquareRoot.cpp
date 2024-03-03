@@ -30,9 +30,11 @@ long long int BS(int n){
 
 int main(){
     // int arr[6]={2, 4, 6, 8, 9, 12};
-
-    int mySqrt= BS(1000000);
-    cout<< "Square root of 144 is " << mySqrt <<endl;
+    int n;
+    cout<<"Enter the vaue of n: ";
+    cin>>n;
+    int mySqrt= BS(n);
+    cout<< "Square root of "<<n<<" is " << mySqrt <<endl;
 
     return 0;
 
