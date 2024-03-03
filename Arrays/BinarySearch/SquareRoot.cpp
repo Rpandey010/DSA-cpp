@@ -1,16 +1,16 @@
 #include<iostream>
 using namespace std;
 
-int BS(int n){
+long long int BS(int n){
 
     int s = 0;
     int e = n;
-    int mid = s + (e-s)/2;
-    int ans = -1;
+    long long int mid = s + (e-s)/2;
+    long long int ans = -1;
 
     while(s<=e){
 
-        int square = mid*mid;
+        long long int square = mid*mid;
 
         if(square == n){
             return mid;
@@ -29,9 +29,9 @@ int BS(int n){
 
 
 int main(){
-    int arr[6]={2, 4, 6, 8, 9, 12};
+    // int arr[6]={2, 4, 6, 8, 9, 12};
 
-    int mySqrt= BS(144);
+    int mySqrt= BS(1000000);
     cout<< "Square root of 144 is " << mySqrt <<endl;
 
     return 0;
