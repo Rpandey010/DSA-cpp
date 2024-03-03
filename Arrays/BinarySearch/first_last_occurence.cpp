@@ -25,7 +25,7 @@ int firstOcc(int arr[], int size, int key){
     return stored_ans;
 }
 
-//FIRST OCCURENCE
+//Last OCCURENCE
 int lastOcc(int arr[], int size, int key){
     int s = 0, e =size -1;
     int mid = s + (e - s)/2;
@@ -50,13 +50,17 @@ int lastOcc(int arr[], int size, int key){
 }
 
 int main(){
-    int A[6] = {1, 2, 3, 3, 6, 7};
+    int A[7] = {1, 2, 3, 3, 3, 6, 7};
 
-    int firstOccurence = firstOcc(A, 6, 3);
+    int firstOccurence = firstOcc(A, 7, 3);
     cout<<" The first Occurence of 3 is at index "<<firstOccurence<<endl;
 
-    int lastOccurence = lastOcc(A, 6, 3);
+    int lastOccurence = lastOcc(A, 7, 3);
     cout<<" The last Occurence of 3 is at index "<<lastOccurence<<endl;
+
+    //TOTAL OCCURENCE
+    int totalOccurence = (lastOccurence - firstOccurence) + 1;
+    cout<<" Total no. of occurence of 3 is " << totalOccurence << endl;
     
     return 0;
 }
