@@ -22,6 +22,7 @@ int main(){
     int key;
     cin>>key;
 
+    // function call 
     bool found = search(arr, 5, key);
 
     if(found){
