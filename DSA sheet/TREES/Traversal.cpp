@@ -13,6 +13,7 @@ struct TreeNode{
     }
 };
 
+//inorder traversal (LEFT-VALUE-RIGHT)
 void inOrder(TreeNode* root){
     //Terminating Condition
     if (root == nullptr)
@@ -27,6 +28,30 @@ void inOrder(TreeNode* root){
     //Go to the right node
     inOrder(root->right);
 }
+
+//preorder traversal (VALUE-LEFT-RIGHT)
+void preOrder(TreeNode* root){
+    //Terminating condition
+    if (root == nullptr)
+        return;
+
+    //Print the root node
+    cout << root->val << " -> ";
+
+    preOrder(root->left);
+    preOrder(root->right);
+}
+
+//postorder traversal (LEFT-RIGHT-VALUE)
+void postOrder(TreeNode* root){
+    if(root == nullptr)
+        return;
+    
+    postOrder(root->left);
+    postOrder(root->right);
+    cout<< root->val << " -> ";
+}
+
 
 int main(){
     //Creating a tree that looks like
@@ -70,11 +95,19 @@ int main(){
     rightNode->right->left = new TreeNode(6);
 
     //INORDER TRAVERSAL
+    cout <<"Inorder traversal: "<<endl;
     inOrder(root);
     cout << "null" << endl;  //to indicate the end of traversal
 
+    //PREORDER TRAVERSAL
+    cout <<"Preorder traversal: "<<endl;
+    preOrder(root);
+    cout << "null" << endl;
+
+    //POSTORDER TRAVERSAL
+    cout <<"Postorder traversal: "<<endl;
+    postOrder(root);
+    cout << "null" << endl;
+
     return 0;
-
-
-
 }
