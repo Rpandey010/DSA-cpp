@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <queue>
 
 struct TreeNode{
     int val;
@@ -50,6 +51,34 @@ void postOrder(TreeNode* root){
     postOrder(root->left);
     postOrder(root->right);
     cout<< root->val << " -> ";
+}
+
+//level order traversal
+void levelOrder(TreeNode* root){
+    if(root == nullptr)
+        return;
+
+    queue<TreeNode*> treeNodeQueue;
+    //start with the root node (0th level)
+    treeNodeQueue.push(root);
+
+    //run the loop till the queue is not empty
+    while(!treeNodeQueue.empty()){
+        TreeNode* treeNode = treeNodeQueue.front();
+        treeNodeQueue.pop();
+
+        //Print the value
+        cout << treeNode->val << " -> ";
+
+        //Add the left child to queue
+        if(treeNode->left != nullptr)
+            treeNodeQueue.push(treeNode->left);
+
+        //Add the right child to queue
+        if(treeNode->right != nullptr)
+            treeNodeQueue.push(treeNode->right);
+    }
+
 }
 
 
@@ -107,6 +136,11 @@ int main(){
     //POSTORDER TRAVERSAL
     cout <<"Postorder traversal: "<<endl;
     postOrder(root);
+    cout << "null" << endl;
+
+    //LEVEL ORDER TRAVERSAL
+    cout <<"Levelorder traversal: "<<endl;
+    levelOrder(root);
     cout << "null" << endl;
 
     return 0;
