@@ -45,9 +45,16 @@ int main()
 {
     vector<int> stalls = {0, 3, 4, 7, 10, 9};
     int k = 4;
-    int ans = aggressiveCows(stalls, k);
-    cout << "The maximum possible minimum distance is: " << ans << "\n";
+    int ans1 = aggressiveCows(stalls, k);
+    cout << "The maximum possible minimum distance is: " << ans1 << "\n";
     return 0;
-}
+
 
 // Output:The maximum possible minimum distance is: 3.
+
+    vector<int> stallss = {1, 4, 5, 8, 11, 10};
+    int l = 4;
+    int ans2 = aggressiveCows(stalls, k);
+    cout << "The maximum possible minimum distance is: " << ans2 << "\n";
+    return 0;
+}
