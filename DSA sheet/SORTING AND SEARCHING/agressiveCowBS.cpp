@@ -52,9 +52,4 @@ int main()
 
 // Output:The maximum possible minimum distance is: 3.
 
-    vector<int> stallss = {1, 4, 5, 8, 11, 10};
-    int l = 4;
-    int ans2 = aggressiveCows(stalls, k);
-    cout << "The maximum possible minimum distance is: " << ans2 << "\n";
-    return 0;
 }
