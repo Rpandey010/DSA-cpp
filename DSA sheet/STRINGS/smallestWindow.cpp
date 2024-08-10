@@ -77,5 +77,6 @@ int main()
     // Print the result
     cout << "Smallest window containing all characters of \"" << P << "\" in \"" << S << "\": " << result << endl;
 
+
     return 0;
 }
