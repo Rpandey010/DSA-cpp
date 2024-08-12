@@ -45,7 +45,6 @@ int main() {
         cout << days << " ";
     }
     cout << endl;
-    
-    
+
     return 0;
 }
